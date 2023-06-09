@@ -7,16 +7,9 @@ def input_text():
     return text.lower()
 
 
-def vowels_check(latter):
-    for vowel_latter in vowels_list:
-        if vowel_latter == latter:
-            return True
-    return False
-
-
 def vowels_count_text(text):
     vowels_in_text = [text[index] for index in range(len(text))
-                      if vowels_check(text[index])]
+                      if text[index] in vowels_list]
     print(f'Список гласных букв: {vowels_in_text}')
     print(f'Длина списка: {len(vowels_in_text)} ')
 
